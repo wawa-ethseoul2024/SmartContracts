@@ -8,7 +8,6 @@ const env = load({
     INFURA_SECRET_KEY: String,
     DEV_WALLET_PRIVATE_KEY: String,
     ETHERSCAN_API_KEY: String,
-    TITAN_WALLET_PRIVATE_KEY: String
 });
 
 // To enable forking, turn one of these booleans on, and then run your tasks/scripts using ``--network hardhat``
@@ -41,10 +40,10 @@ const config: HardhatUserConfig = {
             url: `https://sepolia.infura.io/v3/${env.INFURA_API_KEY}`,
             accounts: [env.DEV_WALLET_PRIVATE_KEY],
         },
-        mainnet: {
-          url: `https://mainnet.infura.io/v3/${env.INFURA_API_KEY}`,
-          accounts: [env.TITAN_WALLET_PRIVATE_KEY]
-        },
+        // mainnet: {
+        //   url: `https://mainnet.infura.io/v3/${env.INFURA_API_KEY}`,
+        //   accounts: [env.TITAN_WALLET_PRIVATE_KEY]
+        // },
         spicy: {
             url: `https://spicy-rpc.chiliz.com/`,
             accounts: [env.DEV_WALLET_PRIVATE_KEY],
@@ -70,6 +69,12 @@ const config: HardhatUserConfig = {
             accounts: [env.DEV_WALLET_PRIVATE_KEY],
             chainId: 80085,
             gasPrice: 45000000000,
+        },
+        katana: {
+            url: "https://rpc.zkatana.gelato.digital",
+            accounts: [env.DEV_WALLET_PRIVATE_KEY],
+            chainId: 1261120,
+            gasPrice: 70000000000,
         },
         hardhat: {
             gasPrice: 225000000000,
