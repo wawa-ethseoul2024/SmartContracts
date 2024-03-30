@@ -95,6 +95,7 @@ const config: HardhatUserConfig = {
             spicy: env.ETHERSCAN_API_KEY,
             snowtrace: "snowtrace",
             fuji: "snowtrace",
+            katana: "katana"
         },
 
         customChains: [
@@ -114,6 +115,14 @@ const config: HardhatUserConfig = {
                     browserURL: "https://avalanche.testnet.routescan.io",
                 },
             },
+            {
+              network: "katana",
+              chainId: 1261120,
+              urls: {
+                apiURL: "https://zkatana.blockscout.com/api",
+                browserURL: "https://zkatana.blockscout.com"
+              }
+            }
         ],
     },
 };
