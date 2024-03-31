@@ -9,7 +9,7 @@ async function main() {
   await nft.waitForDeployment();
 
   console.log(
-    `Xp deployed to ${nft.target}`
+    `Nft deployed to ${nft.target}`
   );
 }
 

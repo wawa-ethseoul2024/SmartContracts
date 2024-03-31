@@ -19,7 +19,7 @@ contract WawaProfile is ERC721, ERC721Burnable, Ownable {
         Ownable(initialOwner)
     {}
 
-    function safeMint(address to) public onlyOwner {
+    function safeMint(address to) public  {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
     }

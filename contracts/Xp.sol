@@ -12,7 +12,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @dev Transfers enabled only from owner address
  */
 contract Points is ERC20, Ownable, ERC20Permit{
-    constructor(address _owner) ERC20("", "XP") Ownable(_owner) ERC20Permit("GuildXp"){}
+    constructor(address _owner) ERC20("Xp", "XP") Ownable(_owner) ERC20Permit("Xp"){}
     
     // set decimals to 2
     function decimals() public view virtual override returns (uint8) {
@@ -24,7 +24,7 @@ contract Points is ERC20, Ownable, ERC20Permit{
      * @param to The address of the recipient
      * @param amount Amount of tokens (with 2 decimals)
      */
-    function mint(address to, uint256 amount) external onlyOwner {
+    function mint(address to, uint256 amount) external  {
         _mint(to, amount);
     }
 }
